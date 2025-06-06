@@ -1,62 +1,165 @@
-import React from 'react';
-import  '../styles/ProductTable.css';
-import { Product } from '../types/product';
-import { formatPrice } from '../utils/format';
-import { Button, Table } from 'react-bootstrap';
+import React, { useMemo } from 'react';
+import {
+  MaterialReactTable,
+  useMaterialReactTable,
+  MRT_GlobalFilterTextField,
+  MRT_ToggleFiltersButton,
+  type MRT_ColumnDef,
+} from 'material-react-table';
+import { Box, lighten } from '@mui/material';
 
+import "../styles/ProductTable.css"
 
-interface Props {
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  date?: string;
+  attributes?: Record<string, string>;
+  [key: string]: unknown;
+}
+
+interface ProductTableProps {
   products: Product[];
   currentPage: number;
   onPageChange: (page: number) => void;
+  sortField: string;
+  onSortChange: (field: string) => void;
+  filters: Record<string, string[]>;
+  setFilters: (filters: Record<string, string[]>) => void;
+  totalItems: number;
+  pageSize: number;
 }
 
+// Utility function to render values based on type
+const renderCellValue = (value: any, key: string): React.ReactNode => {
+  if (!value) return '';
 
-export default function ProductTable({ products, currentPage, onPageChange }: {
-  products: any[];
-  currentPage: number;
-  onPageChange: (page: number) => void;
-}) {
-  if (products.length === 0) return <p>No products found.</p>;
-  const attributeKeys = Object.keys(products[0].attributes || {});
+  const lowerKey = key.toLowerCase();
 
-  return (
-    <div>
-      <Table bordered hover responsive>
-        <thead className="table-light">
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            {attributeKeys.map(attr => (
-              <th key={attr}>{attr}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {products.map(product => (
-            <tr key={product.id}>
-              <td>{product.id}</td>
-              <td>{product.name}</td>
-              <td>{product.description}</td>
-              <td>${product.price.toFixed(2)}</td>
-              {attributeKeys.map(key => (
-                <td key={key}>{product.attributes[key]}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-      <div className="d-flex justify-content-between align-items-center mt-3">
-        <Button variant="secondary" disabled={currentPage === 1} onClick={() => onPageChange(currentPage - 1)}>
-          Previous
-        </Button>
-        <span>Page {currentPage}</span>
-        <Button variant="secondary" onClick={() => onPageChange(currentPage + 1)}>
-          Next
-        </Button>
-      </div>
-    </div>
-  );
+  if (lowerKey.includes('date')) {
+    const date = new Date(value);
+    return isNaN(date.getTime()) ? value : date.toLocaleDateString();
+  }
+
+  return <span>{value}</span>; // all values left-aligned
+};
+
+export default function ProductTable({
+  products,
+  currentPage,
+  onPageChange,
+  totalItems,
+  pageSize,
+}: ProductTableProps) {
+  const allAttributeKeys = useMemo(() => {
+    const keys = new Set<string>();
+    products.forEach((product) => {
+      Object.keys(product.attributes || {}).forEach((key) => keys.add(key));
+    });
+    return Array.from(keys);
+  }, [products]);
+
+  const columns = useMemo<MRT_ColumnDef<Product>[]>(() => {
+    if (!products.length) return [];
+
+    const baseKeys = Object.keys(products[0] ?? {}).filter(
+      (key) => typeof products[0]?.[key] !== 'object' && key !== 'date'
+    );
+
+    const baseColumns: MRT_ColumnDef<Product>[] = baseKeys.map((key) => ({
+      accessorFn: (row) => (row?.[key] != null ? String(row[key]) : ''),
+      id: key,
+      header: key.charAt(0).toUpperCase() + key.slice(1),
+      size: 150,
+      filterVariant: 'multi-select',
+      Cell: ({ cell }) => renderCellValue(cell.getValue(), key),
+    }));
+
+    const attributeColumns: MRT_ColumnDef<Product>[] = allAttributeKeys.map((key) => ({
+      accessorFn: (row) =>
+        row?.attributes?.[key] != null ? String(row.attributes[key]) : '',
+      id: `attributes.${key}`,
+      header: key.charAt(0).toUpperCase() + key.slice(1),
+      size: 150,
+      filterVariant: 'multi-select',
+      Cell: ({ cell }) => renderCellValue(cell.getValue(), key),
+    }));
+
+    return [...baseColumns, ...attributeColumns];
+  }, [products, allAttributeKeys]);
+
+  const table = useMaterialReactTable({
+    columns,
+    data: products,
+    enableColumnFilterModes: true,
+    enableColumnOrdering: true,
+    enableGrouping: true,
+    enableColumnPinning: true,
+    enableFacetedValues: true,
+    enableRowActions: false,
+    enableRowSelection: false,
+    manualPagination: true,
+    rowCount: totalItems,
+    paginationDisplayMode: 'pages',
+    onPaginationChange: (updater) => {
+      const newPageIndex =
+        typeof updater === 'function'
+          ? updater({ pageIndex: currentPage - 1, pageSize }).pageIndex
+          : updater.pageIndex;
+      onPageChange(newPageIndex + 1);
+    },
+    state: {
+      pagination: { pageIndex: currentPage - 1, pageSize },
+    },
+    initialState: {
+      showColumnFilters: true,
+      showGlobalFilter: true,
+      columnPinning: {
+        left: ['mrt-row-expand'],
+        right: [],
+      },
+    },
+muiPaginationProps: {
+  color: 'secondary',
+  rowsPerPageOptions: [],
+  shape: 'rounded',
+  variant: 'outlined',
+  showFirstButton: true,
+  showLastButton: true,
+  sx: {
+    '& .MuiTablePagination-toolbar': {
+      justifyContent: 'flex-end', // move pagination to right if desired
+    },
+    '& .MuiTablePagination-selectLabel, & .MuiTablePagination-select, & .MuiTablePagination-selectIcon, & .MuiInputBase-root':
+      {
+        display: 'none', // hides label, dropdown, and icon
+      },
+  },
+},
+    muiSearchTextFieldProps: {
+      size: 'small',
+      variant: 'outlined',
+    },
+    positionToolbarAlertBanner: 'bottom',
+    renderTopToolbar: ({ table }) => (
+      <Box
+        sx={(theme) => ({
+          backgroundColor: lighten(theme.palette.background.default, 0.05),
+          display: 'flex',
+          gap: '0.5rem',
+          p: '8px',
+          justifyContent: 'space-between',
+        })}
+      >
+        <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+          <MRT_GlobalFilterTextField table={table} />
+          <MRT_ToggleFiltersButton table={table} />
+        </Box>
+      </Box>
+    ),
+  });
+
+  return <MaterialReactTable table={table} />;
 }

@@ -1,16 +1,14 @@
-.table {
-  width: 100%;
-  border-collapse: collapse;
+
+.css-10j3yc8-MuiFormLabel-root-MuiInputLabel-root{
+
+  display: none;
 }
-th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
+
+.css-1y2ya84-MuiInputBase-root-MuiInput-root-MuiSelect-root {
+  display: none;
 }
-th {
-  background-color: #f0f0f0;
-}
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+
+.MuiBox-root .css-exd1zr{
+
+  display: none;
 }
