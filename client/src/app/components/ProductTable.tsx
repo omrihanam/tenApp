@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useMemo } from 'react';
 import {
   MaterialReactTable,
@@ -7,8 +9,9 @@ import {
   type MRT_ColumnDef,
 } from 'material-react-table';
 import { Box, lighten } from '@mui/material';
+import { renderCellValue } from '../utils/renderCellValue';
 
-import "../styles/ProductTable.css"
+import '../styles/ProductTable.css';
 
 interface Product {
   id: number;
@@ -31,20 +34,6 @@ interface ProductTableProps {
   totalItems: number;
   pageSize: number;
 }
-
-// Utility function to render values based on type
-const renderCellValue = (value: any, key: string): React.ReactNode => {
-  if (!value) return '';
-
-  const lowerKey = key.toLowerCase();
-
-  if (lowerKey.includes('date')) {
-    const date = new Date(value);
-    return isNaN(date.getTime()) ? value : date.toLocaleDateString();
-  }
-
-  return <span>{value}</span>; // all values left-aligned
-};
 
 export default function ProductTable({
   products,
@@ -74,7 +63,11 @@ export default function ProductTable({
       header: key.charAt(0).toUpperCase() + key.slice(1),
       size: 150,
       filterVariant: 'multi-select',
-      Cell: ({ cell }) => renderCellValue(cell.getValue(), key),
+      Cell: ({ cell }) =>
+        renderCellValue(
+          cell.getValue() as string | number | null | undefined,
+          key
+        ),
     }));
 
     const attributeColumns: MRT_ColumnDef<Product>[] = allAttributeKeys.map((key) => ({
@@ -84,7 +77,11 @@ export default function ProductTable({
       header: key.charAt(0).toUpperCase() + key.slice(1),
       size: 150,
       filterVariant: 'multi-select',
-      Cell: ({ cell }) => renderCellValue(cell.getValue(), key),
+      Cell: ({ cell }) =>
+        renderCellValue(
+          cell.getValue() as string | number | null | undefined,
+          key
+        ),
     }));
 
     return [...baseColumns, ...attributeColumns];
@@ -121,23 +118,22 @@ export default function ProductTable({
         right: [],
       },
     },
-muiPaginationProps: {
-  color: 'secondary',
-  rowsPerPageOptions: [],
-  shape: 'rounded',
-  variant: 'outlined',
-  showFirstButton: true,
-  showLastButton: true,
-  sx: {
-    '& .MuiTablePagination-toolbar': {
-      justifyContent: 'flex-end', // move pagination to right if desired
-    },
-    '& .MuiTablePagination-selectLabel, & .MuiTablePagination-select, & .MuiTablePagination-selectIcon, & .MuiInputBase-root':
-      {
-        display: 'none', // hides label, dropdown, and icon
+    muiPaginationProps: {
+      color: 'secondary',
+      rowsPerPageOptions: [],
+      shape: 'rounded',
+      variant: 'outlined',
+      showFirstButton: true,
+      showLastButton: true,
+      sx: {
+        '& .MuiTablePagination-toolbar': {
+          justifyContent: 'flex-end',
+        },
+        '& .MuiTablePagination-selectLabel, & .MuiTablePagination-select, & .MuiTablePagination-selectIcon, & .MuiInputBase-root': {
+          display: 'none',
+        },
       },
-  },
-},
+    },
     muiSearchTextFieldProps: {
       size: 'small',
       variant: 'outlined',

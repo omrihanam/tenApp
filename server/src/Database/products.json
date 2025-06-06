@@ -1,0 +1,891 @@
+{
+  "Bike": [
+    {
+      "id": 1,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 2,
+      "name": "City Bike",
+      "description": "Comfortable for commuting",
+      "price": 350,
+      "attributes": {
+        "color": "blue",
+        "wheelSize": "26\""
+      }
+    },
+    {
+      "id": 3,
+      "name": "Electric Bike",
+      "description": "Eco-friendly electric bike",
+      "price": 1200,
+      "attributes": {
+        "color": "black",
+        "wheelSize": "29\""
+      }
+    },
+    {
+      "id": 4,
+      "name": "Folding Bike",
+      "description": "Compact and portable for urban commuting",
+      "price": 450,
+      "attributes": {
+        "color": "green",
+        "wheelSize": "20\""
+      }
+    },
+    {
+      "id": 5,
+      "name": "Hybrid Bike",
+      "description": "Perfect for both road and mountain terrain",
+      "price": 600,
+      "attributes": {
+        "color": "yellow",
+        "wheelSize": "28\""
+      }
+    },
+    {
+      "id": 6,
+      "name": "Cruiser Bike",
+      "description": "Comfortable beach cruiser",
+      "price": 300,
+      "attributes": {
+        "color": "pink",
+        "wheelSize": "26\""
+      }
+    },
+    {
+      "id": 7,
+      "name": "Racing Bike",
+      "description": "High-performance bike for racing",
+      "price": 1500,
+      "attributes": {
+        "color": "black",
+        "wheelSize": "700c"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Mountain X Bike",
+      "description": "Off-road bike for challenging trails",
+      "price": 750,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "29\""
+      }
+    },
+    {
+      "id": 9,
+      "name": "City Pro Bike",
+      "description": "Urban bike with premium features",
+      "price": 900,
+      "attributes": {
+        "color": "silver",
+        "wheelSize": "26\""
+      }
+    },
+    {
+      "id": 10,
+      "name": "Commuter Bike",
+      "description": "Affordable commuter bike for daily rides",
+      "price": 250,
+      "attributes": {
+        "color": "white",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 11,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 12,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 13,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 14,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 15,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 16,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 17,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 18,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 19,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    },
+    {
+      "id": 20,
+      "name": "Mountain Bike",
+      "description": "Great for trails",
+      "price": 500,
+      "attributes": {
+        "color": "red",
+        "wheelSize": "27.5\""
+      }
+    }
+  ],
+  "Laptop": [
+    {
+      "id": 1,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Gaming Laptop",
+      "description": "High performance for gaming",
+      "price": 1800,
+      "attributes": {
+        "brand": "Asus",
+        "ram": "32GB",
+        "gpu": "RTX 3070",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Business Laptop",
+      "description": "Affordable work laptop",
+      "price": 800,
+      "attributes": {
+        "brand": "HP",
+        "ram": "8GB",
+        "storage": "256GB SSD"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Ultrabook",
+      "description": "Lightweight and powerful",
+      "price": 1200,
+      "attributes": {
+        "brand": "Dell",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    }
+  ],
+  "TV": [
+    {
+      "id": 1,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 2,
+      "name": "OLED TV 65\"",
+      "description": "Premium OLED display",
+      "price": 1200,
+      "attributes": {
+        "brand": "Sony",
+        "resolution": "4K",
+        "size": "65\""
+      }
+    },
+    {
+      "id": 3,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 4,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 5,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 6,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 7,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 8,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 9,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 10,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 11,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 12,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 13,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 14,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 15,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 16,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 17,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 18,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 19,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    },
+    {
+      "id": 20,
+      "name": "Smart TV 55\"",
+      "description": "4K Ultra HD Smart TV",
+      "price": 600,
+      "attributes": {
+        "brand": "LG",
+        "resolution": "4K",
+        "size": "55\""
+      }
+    }
+  ],
+  "Car": [
+    {
+      "id": 1,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ford Mustang",
+      "description": "Classic American muscle car",
+      "price": 35000,
+      "attributes": {
+        "brand": "Ford",
+        "color": "red",
+        "engine": "V8",
+        "year": "2022"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Tesla Model S",
+      "description": "Electric car with autopilot",
+      "price": 80000,
+      "attributes": {
+        "brand": "Tesla",
+        "color": "black",
+        "engine": "Electric",
+        "year": "2023"
+      }
+    }
+  ]
+}
